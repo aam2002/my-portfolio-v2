@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +12,7 @@ nav{
     width: 100vw;
     height: 7vh;
     top: 0;
+    z-index: 4;
 
     
 }
@@ -26,10 +27,7 @@ nav ul {
     display: flex;
     flex-direction: row;
 }
-#About{
-    height: 100vh;
-    background-color: red;
-}
+
 #Journey{
     height: 100vh;
     background-color:rgb(13, 255, 0);
@@ -50,7 +48,7 @@ nav ul {
 #Contact{
     height: 100vh;
     background-color: pink;
-} */
+}
 
 :root {
     --blue-rgb: 92 192 249;
@@ -58,11 +56,21 @@ nav ul {
     --brown-rgb: 127 46 23;
   }
   
-  html, body {
+   html, body {
     background-color: black;
   }
-  
+  /*
   body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 1000ms;
+  } */
+  #About{
+    background-color: black;
     min-height: 100vh;
     padding: 0;
     margin: 0;
@@ -72,19 +80,19 @@ nav ul {
     transition: background-color 1000ms;
   }
   
-  body:has(.card[data-color="blue"]:hover) {
+  #About:has(.card[data-color="blue"]:hover) {
     background-color: rgb(var(--blue-rgb) / 25%);
   }
   
-  body:has(.card[data-color="blue"]:hover) {
+  #About:has(.card[data-color="blue"]:hover) {
     background-color: rgb(var(--blue-rgb) / 25%);
   }
   
-  body:has(.card[data-color="green"]:hover) {
+  #About:has(.card[data-color="green"]:hover) {
     background-color: rgb(var(--green-rgb) / 25%);
   }
   
-  body:has(.card[data-color="brown"]:hover) {
+  #About:has(.card[data-color="brown"]:hover) {
     background-color: rgb(var(--brown-rgb) / 25%);
   }
   
@@ -110,7 +118,7 @@ nav ul {
   
   .card .card-image {
     width: clamp(300px, 20vw, 500px);
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 1;
     border-radius: clamp(0.5rem, 0.75vw, 2rem);
   }
   
